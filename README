@@ -1,0 +1,17 @@
+Basic apache camel scala maven project generator
+http://github.com/tc/camel-scala-archetype
+
+This archetype generates a camel project with proper shutdown handling, mysql and activemq connections.
+
+Dev:
+git clone http://github.com/tc/camel-scala-archetype
+mvn install
+
+Run:
+mvn archetype:generate -DgroupId=groupname -DartifactId=artifactname -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=camel-scala-archetype -DarchetypeGroupId=tc -DarchetypeVersion=1.0-SNAPSHOT
+
+Deploy:
+mvn -DaltDeploymentRepository=repo::default::file:../../tc-maven-repo/releases clean deploy
+mvn -DaltDeploymentRepository=snapshot-repo::default::file:../../tc-maven-repo/snapshots clean deploy
+
+cd ../../tc-maven-repo && git add . && git commit -m "new version of camel scala archetype" && git push

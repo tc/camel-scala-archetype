@@ -1,0 +1,20 @@
+development:
+  username: "test"
+  password: "password"
+  consumer_connector_uri: failover://(nio://localhost:61616)?initialReconnectDelay=5000&randomize=false 
+
+staging:
+  username: "test"
+  password: "password"
+  consumer_connector_uri: failover://(nio://localhost:61616)?initialReconnectDelay=5000&randomize=false 
+
+test:
+  username: "test"
+  password: "password"
+  consumer_connector_uri: failover://(nio://localhost:61616)?initialReconnectDelay=5000&randomize=false 
+
+production:
+  username: "test"
+  password: "password"
+  consumer_connector_uri: failover://(nio://localhost:61616)?initialReconnectDelay=5000&randomize=false 
+
